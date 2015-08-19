@@ -1,0 +1,123 @@
+/* Microsoft Visual C++ generated resource script. */
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+#include <winresrc.h>
+
+#ifdef IDC_STATIC
+#undef IDC_STATIC
+#endif
+#define IDC_STATIC      (-1)
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/****************************************************************************
+** English (United States) resources
+*/
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+
+#ifdef APSTUDIO_INVOKED
+/****************************************************************************
+**
+** TEXTINCLUDE
+*/
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""winres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    /* APSTUDIO_INVOKED */
+
+/****************************************************************************
+**
+** Dialog
+*/
+
+IDD_DIALOG1 DIALOGEX 0, 0, 180, 136
+STYLE DS_SETFONT | WS_POPUP | WS_BORDER | WS_SYSMENU
+FONT 8, "Microsoft Sans Serif", 400, 0, 0x0
+BEGIN
+    GROUPBOX        "Screen resolution formula",IDC_STATIC,6,7,96,48
+    CONTROL         "VI register layout",VI_REGISTER_LAYOUT,"Button",BS_AUTORADIOBUTTON,10,17,80,8
+    CONTROL         "DP frame buffer",DP_FRAME_BUFFER,"Button",BS_AUTORADIOBUTTON,10,29,80,8
+    CONTROL         "User-defined",USER_DEFINED,"Button",BS_AUTORADIOBUTTON,10,41,80,8
+    GROUPBOX        "Screen Size",IDC_STATIC,107,11,68,40
+    EDITTEXT        SCREEN_WIDTH,112,32,28,14,ES_RIGHT | ES_NUMBER
+    EDITTEXT        SCREEN_HEIGHT,142,32,28,14,ES_RIGHT | ES_NUMBER
+    CTEXT           " Width",IDC_STATIC,114,20,22,8
+    LTEXT           "Height",IDC_STATIC,145,20,22,8
+    CONTROL         "Bypass DAC filters",VI_STATUS_REG_FILTER,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,96,60,72,8
+    CONTROL         "Force NN",GPU_ACCELERATED_SCALING,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,96,74,72,8
+    CONTROL         "Refresh stepping",PAUSE_EVERY_FRAME,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,96,87,72,8
+    GROUPBOX        "Iteration leaping",IDC_STATIC,6,56,72,40
+    CTEXT           "Refresh",IDC_STATIC,10,66,28,8
+    CTEXT           "Triangles",IDC_STATIC,43,66,30,8
+    EDITTEXT        UPDATE_SCREEN,10,78,30,14,ES_RIGHT | ES_NUMBER
+    EDITTEXT        PROCESSDLIST,44,78,30,14,ES_RIGHT | ES_NUMBER
+    GROUPBOX        "Graphics microcode detection",IDC_STATIC,6,96,169,28
+    COMBOBOX        MICROCODE,9,108,160,30,CBS_DROPDOWNLIST | WS_DISABLED | WS_VSCROLL | WS_TABSTOP
+END
+
+IDD_DIALOG2 DIALOGEX 0, 0, 180, 136
+STYLE DS_SETFONT | WS_POPUP | WS_BORDER | WS_SYSMENU
+FONT 8, "Microsoft Sans Serif", 400, 0, 0x1
+BEGIN
+    LTEXT           "GL_VERSION",IDC_STATIC,7,7,46,8
+    EDITTEXT        GL_Version,8,18,160,14,ES_AUTOHSCROLL | ES_READONLY
+    LTEXT           "GL_VENDOR",IDC_STATIC,7,35,46,8
+    EDITTEXT        GL_Vendor,8,46,160,14,ES_AUTOHSCROLL | ES_READONLY
+    LTEXT           "GL_RENDERER",IDC_STATIC,7,63,57,8
+    EDITTEXT        GL_Renderer,8,74,160,14,ES_AUTOHSCROLL | ES_READONLY
+    CONTROL         "GL_EXT_bgra",SUPPORT_GDI_BITMAP,"Button",BS_AUTOCHECKBOX | WS_DISABLED | WS_TABSTOP,8,92,112,8
+    CONTROL         "GL_ARB_vertex_buffer_object",SUPPORT_BUFFER_OBJECTS,
+                    "Button",BS_AUTOCHECKBOX | WS_DISABLED | WS_TABSTOP,8,102,112,8
+    CONTROL         "GL_ARB_pixel_buffer_object",SUPPORT_PIXEL_DMAs,"Button",BS_AUTOCHECKBOX | WS_DISABLED | WS_TABSTOP,8,112,112,8
+    CONTROL         "GL_ARB_vertex_program",SUPPORT_VERTEX_PROGRAM,"Button",BS_AUTOCHECKBOX | WS_DISABLED | WS_TABSTOP,8,122,112,8
+    PUSHBUTTON      "Diagnose",DLLTEST,124,94,52,14
+    PUSHBUTTON      "Write DRAM",RDRAM_DUMP,124,116,52,14
+END
+
+/****************************************************************************
+**
+** DESIGNINFO
+*/
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO
+BEGIN
+    IDD_DIALOG1, DIALOG
+    BEGIN
+        RIGHTMARGIN, 178
+    END
+
+    IDD_DIALOG2, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 91
+    END
+END
+#endif    /* APSTUDIO_INVOKED */
+
+#endif    /* English (United States) resources */
+
+#ifndef APSTUDIO_INVOKED
+/****************************************************************************
+**
+** Generated from the TEXTINCLUDE 3 resource.
+*/
+
+#endif    /* not APSTUDIO_INVOKED */
