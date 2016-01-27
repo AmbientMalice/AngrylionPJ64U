@@ -1073,17 +1073,17 @@ STRICTINLINE void combiner_2cycle(int adseed, UINT32* curpixel_cvg)
     }
     else
     {
-        redkey = combined_color.r;
+        redkey = SIGN(combined_color.r, 17);
         if (redkey >= 0)
             redkey = (key_width.r << 4) - redkey;
         else
             redkey = (key_width.r << 4) + redkey;
-        greenkey = combined_color.g;
+        greenkey = SIGN(combined_color.g, 17);
         if (greenkey >= 0)
             greenkey = (key_width.g << 4) - greenkey;
         else
             greenkey = (key_width.g << 4) + greenkey;
-        bluekey = combined_color.b;
+        bluekey = SIGN(combined_color.b, 17);
         if (bluekey >= 0)
             bluekey = (key_width.b << 4) - bluekey;
         else
